@@ -5,12 +5,14 @@
 ###### host rendszer: Ubuntu Desktop 17.10, macos 10.13, Windows 10
 ###### v0.1
 ###### TODO:
-install script<br />
-basic config<br />
-md-ben teljes részletes leírás<br />
-képek<br />
-vbox configok<br />
-pfsense setup<br />
+[]install script<br />
+[]basic config<br />
+[]txt változat (?)<br />
+[]több, részletes md, esetleges hibakezelés<br />
+[]md-ben teljes részletes leírás<br />
+[]képek<br />
+[]vbox configok<br />
+[]pfsense setup<br />
 <br /><br /><br />
 Kezdjük a szerver virtuális gép beállításával <br />
 Csináljuk meg a host-only networkot. Ezt a virtual box beállításai > hálózat pontban találjuk.<br />
