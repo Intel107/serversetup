@@ -1,5 +1,5 @@
 # serversetup
-##Vizsgasegédlet ansible + WordPress szerverhez.<br />
+##Vizsgasegédlet ansible + WordPress szerverhez.
 ###Created by: Arnold
 ###init: 2018.03.22 23:00<br />
 ###HOST rendszer: Ubuntu Desktop 17.10.1<br />
