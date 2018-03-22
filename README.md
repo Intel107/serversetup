@@ -1,13 +1,13 @@
 # serversetup
-Vizsgasegédlet ansible + WordPress szerverhez.
-init: 2018.03.22 23:00
-HOST rendszer: Ubuntu Desktop 17.10.1
-v0.1
-TODO:
-install script
-basic config
-md-ben teljes részletes leírás
-képek
-vbox configok
-pfsense setup
-![teszt](https://i.imgur.com/sNZ0V4q.jpg)
+Vizsgasegédlet ansible + WordPress szerverhez.<br />
+init: 2018.03.22 23:00<br />
+HOST rendszer: Ubuntu Desktop 17.10.1<br />
+v0.1<br />
+TODO:<br />
+install script<br />
+basic config<br />
+md-ben teljes részletes leírás<br />
+képek<br />
+vbox configok<br />
+pfsense setup<br />
+
