@@ -1,10 +1,10 @@
 # serversetup
-## Vizsgasegédlet ansible + WordPress szerverhez.
-### Created by: Arnold Tóth
-### init: 2018.03.22 23:00
-#### HOST rendszer: Ubuntu Desktop 17.10.
-##### v0.1
-##### TODO:
+## Vizsgasegédlet ansible + WordPress szerverhez
+#### Created by: Arnold Tóth
+##### init: 2018.03.22 23:00
+##### HOST rendszer: Ubuntu Desktop 17.10.
+###### v0.1
+###### TODO:
 install script<br />
 basic config<br />
 md-ben teljes részletes leírás<br />
