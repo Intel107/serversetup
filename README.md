@@ -3,6 +3,7 @@
 #### By: Arnold Tóth
 ##### init: 2018.03.22 23:00
 ###### host rendszer: Ubuntu Desktop 17.10.
+###### illetve macos 10.13
 ###### v0.1
 ###### TODO:
 install script<br />
