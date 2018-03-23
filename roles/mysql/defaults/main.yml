@@ -5,4 +5,4 @@ wp_mysql_password: WordPress!32
 login_user: "{{ mysql_admin_user }}"
 login_password: "{{ mysql_admin_password }}"
 
-# mysql alapbeállítások
+# defaults file for mysql

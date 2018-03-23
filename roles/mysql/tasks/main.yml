@@ -1,12 +1,12 @@
 ---
-- name: MySQL adatbázis létrehozása
+- name: Mysql adatbázis létrehozása..
   mysql_db: 
     name={{ wp_mysql_db }} 
     state=present
     login_user={{ login_user }}
     login_password={{ login_password }}
 
-- name: MySQL felhasználó létrehozása
+- name: Mysql felhasználó létrehozása..
   mysql_user: 
     name={{ wp_mysql_user }} 
     password={{ wp_mysql_password }} 

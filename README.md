@@ -24,8 +24,8 @@ Csináljuk meg a virtuális gépet *ha nincs fent*, majd egyből *még indítás
 Ha nincs felrakva a rendszer, akkor installáljuk. Ez semmi extra, csak a standard Next > Next > OK procedúra <br />
 *(Ha esetleg problémád lenne az ubuntu szerver telepítéssel, ebben a gitben lesz egy ubiinstall.md a segítségedre)*<br />
 **ezeket a beállításokat fogom használni:**<br />
-username: user<br />
-passw: kalifornia<br />
+felhasználónév: user<br />
+jelszó: kalifornia<br />
 hostname: ubuntu-sv<br />
 Telepítésnél elsődleges interfésznek válasszuk a *bridge-lt* adaptert! <br />
 !!!KÉP:install!!!<br />
