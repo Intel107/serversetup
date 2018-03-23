@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$EUID" -ne 0 ]
+if (( $EUID != 0 )); then
   then echo "Rootként futtasd! (*sudo* sh setup.sh)"
   exit
 fi
