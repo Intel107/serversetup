@@ -1,4 +1,4 @@
-# serversetup
+# szerversetup
 ## Vizsgasegédlet ansible + WordPress szerverhez
 #### By: Arnold Tóth
 ##### felhasznált anyagok: Google, tanórák, git: andreipak/wordpress-ansible
