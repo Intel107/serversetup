@@ -6,7 +6,7 @@
 ###### host rendszer: Ubuntu Desktop 17.10, macos 10.13, Windows 10
 ###### v0.1
 ###### TODO:
-[]install script<br />
+[x]install script<br />
 []basic config<br />
 []txt változat (?)<br />
 []több, részletes md, esetleges hibakezelés<br />
