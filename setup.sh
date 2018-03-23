@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if (( $EUID != 0 )); then
-  then echo "Rootként futtasd! (*sudo* sh setup.sh)"
+  echo "Rootként futtasd! (*sudo* sh setup.sh)"
   exit
 fi
 	echo "update & upgrade"
