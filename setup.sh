@@ -1,9 +1,9 @@
 #!/bin/bash
-
-if (( $EUID != 0 )); then
-  echo "Rootként futtasd! (*sudo* sh setup.sh)"
-  exit
+if ! [$(id -u) = 0]; then
+    echo "rootként futtasd! (sudo sh setup.sh)"
+    exit 1
 fi
+    echo "rootjog ok! (uid:"$UID")"
 	echo "update & upgrade"
 	sudo apt update && sudo apt upgrade -y
 	echo "ssh telepítése"
