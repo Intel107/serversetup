@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if [[ $EUID -ne 0 ]]; then
-   	echo "rootként futtasd! (sudo sh setup.sh)" 
-   	exit 1
-else
+if [ "$EUID" -ne 0 ]
+  then echo "Rootként futtasd! (*sudo* sh setup.sh)"
+  exit
+fi
 	echo "update & upgrade"
 	sudo apt update && sudo apt upgrade -y
 	echo "ssh telepítése"
@@ -16,4 +16,3 @@ else
     sudo apt autoclean -y && sudo apt autoremove -y
     read -sp 'Jelszó: 'sqljelszo
     sudo ansible-playbook playbook.yml -i hosts -e mysql_root_password=$sqljelszo
-fi
