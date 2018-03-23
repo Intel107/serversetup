@@ -1,5 +1,5 @@
 #!/bin/bash
-if ! [$(id -u) = 0]; then
+if ! [ $(id -u) = 0 ]; then
     echo "rootként futtasd! (sudo sh setup.sh)"
     exit 1
 fi
