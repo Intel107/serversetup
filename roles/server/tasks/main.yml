@@ -1,5 +1,5 @@
 ---
-- name: Update apt cache
+- name: apt cache frissítése
   apt: update_cache=yes cache_valid_time=3600
   sudo: yes
 
@@ -18,7 +18,7 @@
    value: "{{ mysql_admin_password }}"
 
  
-- name: Install mysql-server
+- name: MySQL szerver telepítése
   apt: name=mysql-server state=present
   sudo: yes
 
@@ -36,7 +36,7 @@
    value: "password"
 
 
-- name: Install required software
+- name: Szükséges szoftverek telepítése
   apt: name={{ item }} state=present
   sudo: yes
   with_items:

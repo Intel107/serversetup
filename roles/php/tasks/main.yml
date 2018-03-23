@@ -1,5 +1,5 @@
 ---
-- name: Install php extensions
+- name: php kiegészítők telepítése
   apt: name={{ item }} state=present
   sudo: yes
   with_items:
