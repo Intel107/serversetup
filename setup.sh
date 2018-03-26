@@ -9,16 +9,15 @@ if ! [ $(id -u) = 0 ]; then
 fi
     echo "${YEL}rootjog ok!${NC}"
 	echo "${YEL}apt update......${NC}"
-	sudo apt update
+	sudo apt update -y
 	echo "${YEL}ssh telepítése......${NC}"
 	sudo apt install openssh-server -y
 	echo "${YEL}git, ansible telepítése......${NC}"
     sudo apt-add-repository ppa:ansible/ansible -y
-    sudo apt update
+    sudo apt update -y
 	sudo apt install git software-properties-common ansible -y
     echo "${YEL}apt autoclean......${NC}"
     sudo apt autoclean -y && sudo apt autoremove -y
     echo "${YEL}Add meg a MySQL jelszavad [bármi lehet]:${NC}"
     read sqljelszo
     sudo ansible-playbook playbook.yml -i hosts -e mysql_root_password=$sqljelszo
-    
