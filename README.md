@@ -55,5 +55,23 @@ Az első képernyőn a keymapot érdemes magyarra állítani(hu.iso2 néven szer
 Válasszuk ki az Accept > Quick/easy installt > Standard kernel > Reboot menüpontokat<br />
 Vegyük ki a virtuális gépből az iso-t. hogy következő induláskor ne arról induljon<br />
 !!!KÉP:remove iso!!!<br />
-Miután újraindul, megkapjuk a pfsense főmenüjét. Itt kérjünk egy shellt a 8-as gombbal, majd írjuk be a `pfctl -d` parancsot, hogy hozzáférjünk a webconfighoz a WAN lábról is<br /> lessük ki a WAN láb ip-címét, és írjuk be a host gép böngészőjébe<br />
-!!!KÉP:WAN IP!!!
+Miután újraindul, megkapjuk a pfsense főmenüjét. Itt kérjünk egy shellt a 8-as gombbal, majd írjuk be a `pfctl -d` parancsot, hogy hozzáférjünk a webconfighoz a WAN lábról is, majd lépjünk ki egy `exit` beütésével<br />
+Ezután lessük ki a WAN láb ip-címét, és írjuk be a host gép böngészőjébe<br />
+!!!KÉP:WAN IP!!!<br />
+A böngészőnek nem feltétlen tetszik az aláíratlan https bizonyítvány, ezért ne ijedjünk meg, teljesen normális a nagy piros felkiáltójeles háromszög.<br />
+Az Advanced/Haladó gombbal kérhetjük is, hogy engedjen minket be a teljesen biztonságos pfsense webconfigba.<br />
+Itt léjünk be egy `admin/pfsense` párossal <br />
+Lefuttat nekünk egy varázslót, amiben kéri, hogy adjuk meg a működéséhez szükséges minenféléket.<br />
+Nyomjunk két Next-et, és ezután figyeljük mit hogyan írunk.<br />
+Én ezekkel a beállításokkal használtam, a feladat kéréseinek megfelelően módosítsuk őket:<br />
+Hostname: pfSense <br />
+Domain: suli.lan <br />
+Primary DNS Server: 8.8.8.8 <br />
+Secondary DNS Server: 8.8.4.4 <br />
+Time server: time.euro.apple.com <br />
+A következő oldalon ijesztően sok konfig közül néhány említésre méltó van csak:<br />
+DHCP Hostname: pfSense-totha<br />
+Illetve a két alsó pipa, az maradjon is úgy<br />
+A következő oldalon a LAN beállításokra kérdez rá. Ez megint tőlünk, illetve a feladattól függ. Az alapbeállítás-t írjuk át 192.168.1.1-ről 192.168.**56**.1-re<br />
+Az utolsó oldalon pedig adjunk meg egy admin jelszót, majd jegyezzük meg <br />
+A Reaload gombbal a szerver újratölti a beállításokat. Kb fél perc múlva adjuk ki megint a `pfctl -d` parancsot, hogy ismét hozzáférjünk a confighoz<br />
