@@ -34,8 +34,8 @@ Ha a telepítés befejeződött, indítsuk újra a gépet, majd jelentkezzünk b
 Először is telepítsük az openssh-server-t: `sudo apt install openssh-server`<br />
 Lessük meg az ip-címünket az `ip addr sh` parancsot kiadva! Keressük ki a bridgelt kártya ip címét (elméletileg csak ennek van értelmes címe, a neve általában `INTERFÉSZ NÉV` )<br />
 Lépjünk be a **host** gépről: `ssh user@virtuális.gép.ip.címe` <br />
-Írjunk be egy *yes*-t majd adjuk meg *user* jelszavát.
-!!!KÉP:ssh setup+LOGIN!!<br />
+Írjunk be egy *yes*-t majd adjuk meg *user* jelszavát.<br />
+!!!KÉP:ssh setup+LOGIN!!!<br />
 Szedjük le a szükséges anyagokat a `git clone https://github.com/Intel107/serversetup.git` paranccsal!<br />
-Menjünk bele a mappájába (`cd serversetup`), majd futtassuk le a beállító scriptet (`./setup.sh`) <br />
+Menjünk bele a mappájába (`cd serversetup`), majd futtassuk le a beállító scriptet (`sudo ./setup.sh`) <br />
 !!!KÉP:github clone+setup.sh!!!<br />
