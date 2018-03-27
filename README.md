@@ -30,7 +30,7 @@ Ha nincs felrakva a rendszer, akkor installáljuk. Ez semmi extra, csak a standa
 Telepítésnél elsődleges interfésznek válasszuk a *bridge-lt* adaptert! <br />
 !!!KÉP:install!!!<br />
 Ha a telepítés befejeződött, indítsuk újra a gépet, majd jelentkezzünk be a megadott felhasználó/jelszó kombinációval (user/kalifornia)<br />
-[!!] Ha a feladat azt kéri, hogy a beállítást ssh-n keresztül csináljuk, akkor a telepítés után *egyből* csináljuk ezt meg!<br />
+[!!] Ha a feladat azt kéri, hogy a beállítást ssh-n keresztül csináljuk, akkor a telepítés után *egyből* csináljuk ezt meg, illetve innentől kezdve *ne* használjuk a virtualboxban futó oprendszert, csak a hoston lévő terminált!<br />
 Először is telepítsük az openssh-server-t: `sudo apt install openssh-server`<br />
 Lessük meg az ip-címünket az `ip addr sh` parancsot kiadva! Keressük ki a bridgelt kártya ip címét (elméletileg csak ennek van értelmes címe, a neve általában `enp0s3` )<br />
 Lépjünk be a **host** gépről: `ssh user@virtuális.gép.ip.címe` <br />
@@ -39,3 +39,21 @@ Lépjünk be a **host** gépről: `ssh user@virtuális.gép.ip.címe` <br />
 Szedjük le a szükséges anyagokat a `git clone https://github.com/Intel107/serversetup.git` paranccsal!<br />
 Menjünk bele a mappájába (`cd serversetup`), majd futtassuk le a beállító scriptet (`sudo ./setup.sh`) <br />
 !!!KÉP:github clone+setup.sh!!!<br />
+Hagyjuk, hogy letöltse és telepítse a script a programokat, amikor jelszót kér, adjunk meg neki egyet *(illetve jegyezzük meg)*. Ez lesz a MySQL szervernek a root jelszava. [Ha véletlen nem adsz meg semmit, a jelszó "kalifornia"] <br />
+Ha végzett, nézzük meg működik-e!<br />
+A script miután lefutott, kidobja nekünk a virtuális gép IP-címét, írjuk is be ezt a címet a host gép böngészőjébe.<br />
+!!!KÉP script ip + wp setuppage!!! <br />
+Itt láthatjuk a WordPress telepítőjét. Értelemszerűen töltsük ki, jegyezzük meg miket adunk meg (főleg az username/password kombót)<br />
+**A szerver beállítását ezzel meg is csináltuk, jöhet a tűzfal**<br />
+[!!] Előtte állítsuk le a virtuális gépet, majd a beállításaiból szedjük ki a **bridgelt** adaptert! Utána ne felejtsük el visszakapcsolni a gépet <br />
+!!!KÉP: bridgelt kártya off!!<br />
+###pfSense
+Hozzunk létre egy új virtuális gépet pfsense néven! (ha még nincs) Az alap beállítások /OpenBSD 64-bit/ tökéletesen megfelelnek(next>next>ok) <br />
+Indítás előtt adjunk ennek is egy bridgelt meg egy host-only kártyát!<br />
+Egy enterrel indítsuk el a telepítőjét.<br />
+Az első képernyőn a keymapot érdemes magyarra állítani(hu.iso2 néven szerepel)<br />
+Válasszuk ki az Accept > Quick/easy installt > Standard kernel > Reboot menüpontokat<br />
+Vegyük ki a virtuális gépből az iso-t. hogy következő induláskor ne arról induljon<br />
+!!!KÉP:remove iso!!!<br />
+Miután újraindul, megkapjuk a pfsense főmenüjét. Itt kérjünk egy shellt a 8-as gombbal, majd írjuk be a `pfctl -d` parancsot, hogy hozzáférjünk a webconfighoz a WAN lábról is<br /> lessük ki a WAN láb ip-címét, és írjuk be a host gép böngészőjébe<br />
+!!!KÉP:WAN IP!!!

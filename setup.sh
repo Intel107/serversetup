@@ -23,4 +23,4 @@ fi
     echo "${YEL}Add meg a MySQL jelszavad [bármi lehet]:${NC}"
     read sqljelszo
     sudo ansible-playbook playbook.yml -i hosts -e mysql_root_password=$sqljelszo
-    echo "${YEL} Virtuális gép IP címe: $IPCIM ${NC}"
+    echo "${YEL} Virtuális gép IP címe:${NC} $IPCIM"
