@@ -18,7 +18,7 @@
 Kezdjük a szerver virtuális gép beállításával <br />
 Csináljuk meg a host-only networkot. Ezt a virtual box beállításai > hálózat pontban találjuk.<br />
 !!!KÉP: vbox host only!!!<br />
-Csináljuk meg a virtuális gépet *ha nincs fent*, majd egyből *még indítás előtt* állítsuk be be a hálózati adaptereit. *Ideiglenesen* kap egy **bridgelt** és egy **host-only** adaptert, a könnyű ssh elérésért és tesztelésért, *később a bridgelt-et a vizsga követelményei miatt kivesszük.*<br />
+Csináljuk meg a virtuális gépet *ha nincs fent*, majd egyből *még indítás előtt* állítsuk be be a hálózati adaptereit. *Ideiglenesen* kap egy **bridgelt** és egy **host-only** adaptert, a könnyű ssh elérésért és tesztelésért, *később a bridgelt-et kivesszük, mert a forgalom a tűzfalon keresztül fog folyani.*<br />
 **jegyezzük meg meg melyik adapternek mi a neve, később szükségünk lesz rá!**<br />
 !!!KÉP(networks)x2!!!<br />
 Ha nincs felrakva a rendszer, akkor installáljuk. Ez semmi extra, csak a standard Next > Next > OK procedúra <br />
@@ -32,7 +32,7 @@ Telepítésnél elsődleges interfésznek válasszuk a *bridge-lt* adaptert! <br
 Ha a telepítés befejeződött, indítsuk újra a gépet, majd jelentkezzünk be a megadott felhasználó/jelszó kombinációval (user/kalifornia)<br />
 [!!] Ha a feladat azt kéri, hogy a beállítást ssh-n keresztül csináljuk, akkor a telepítés után *egyből* csináljuk ezt meg!<br />
 Először is telepítsük az openssh-server-t: `sudo apt install openssh-server`<br />
-Lessük meg az ip-címünket az `ip addr sh` parancsot kiadva! Keressük ki a bridgelt kártya ip címét (elméletileg csak ennek van értelmes címe, a neve általában `INTERFÉSZ NÉV` )<br />
+Lessük meg az ip-címünket az `ip addr sh` parancsot kiadva! Keressük ki a bridgelt kártya ip címét (elméletileg csak ennek van értelmes címe, a neve általában `enp0s3` )<br />
 Lépjünk be a **host** gépről: `ssh user@virtuális.gép.ip.címe` <br />
 Írjunk be egy *yes*-t majd adjuk meg *user* jelszavát.<br />
 !!!KÉP:ssh setup+LOGIN!!!<br />
