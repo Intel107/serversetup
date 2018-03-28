@@ -64,14 +64,14 @@ Itt léjünk be egy `admin/pfsense` párossal <br />
 Lefuttat nekünk egy varázslót, amiben kéri, hogy adjuk meg a működéséhez szükséges minenféléket.<br />
 Nyomjunk két Next-et, és ezután figyeljük mit hogyan írunk.<br />
 Én ezekkel a beállításokkal használtam, a feladat kéréseinek megfelelően módosítsuk őket:<br />
-`Hostname: pfSense <br />
-Domain: suli.lan <br />
-Primary DNS Server: 8.8.8.8 <br />
-Secondary DNS Server: 8.8.4.4 <br />
-Time server: time.euro.apple.com <br />`
+`Hostname: pfSense` <br />
+`Domain: suli.lan` <br />
+`Primary DNS Server: 8.8.8.8` <br />
+`Secondary DNS Server: 8.8.4.4` <br />
+`Time server: time.euro.apple.com` <br />
 A következő oldalon ijesztően sok konfig közül néhány említésre méltó van csak:<br />
 `DHCP Hostname: pfSense-totha<br />`
-Illetve a két alsó pipa, abból a felsőt szedjük ki, hogy a host gépről el tudjuk érni az oldalt<br />
+Illetve a két alsó pipa, abból a felsőt *(private networks)* szedjük ki, hogy a host gépről el tudjuk érni az oldalt<br />
 A következő oldalon a LAN beállításokra kérdez rá. Ez megint tőlünk, illetve a feladattól függ. Az alapbeállítás-t írjuk át 192.168.1.1-ről 192.168.**56**.2-re<br />
 Az utolsó oldalon pedig adjunk meg egy admin jelszót, majd jegyezzük meg <br />
 A Reaload gombbal a szerver újratölti a beállításokat. Kb fél perc múlva adjuk ki megint a `pfctl -d` parancsot, hogy ismét hozzáférjünk a confighoz<br />
