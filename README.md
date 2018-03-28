@@ -47,7 +47,7 @@ Itt láthatjuk a WordPress telepítőjét. Értelemszerűen töltsük ki, jegyez
 **A szerver beállítását ezzel meg is csináltuk, jöhet a tűzfal**<br />
 [!!] Előtte állítsuk le a virtuális gépet, majd a beállításaiból szedjük ki a **bridgelt** adaptert! Utána ne felejtsük el visszakapcsolni a gépet <br />
 !!!KÉP: bridgelt kártya off!!<br />
-###pfSense
+### pfSense
 Hozzunk létre egy új virtuális gépet pfsense néven! (ha még nincs) Az alap beállítások /OpenBSD 64-bit/ tökéletesen megfelelnek(next>next>ok) <br />
 Indítás előtt adjunk ennek is egy bridgelt meg egy host-only kártyát!<br />
 Egy enterrel indítsuk el a telepítőjét.<br />
@@ -64,14 +64,14 @@ Itt léjünk be egy `admin/pfsense` párossal <br />
 Lefuttat nekünk egy varázslót, amiben kéri, hogy adjuk meg a működéséhez szükséges minenféléket.<br />
 Nyomjunk két Next-et, és ezután figyeljük mit hogyan írunk.<br />
 Én ezekkel a beállításokkal használtam, a feladat kéréseinek megfelelően módosítsuk őket:<br />
-Hostname: pfSense <br />
+`Hostname: pfSense <br />
 Domain: suli.lan <br />
 Primary DNS Server: 8.8.8.8 <br />
 Secondary DNS Server: 8.8.4.4 <br />
-Time server: time.euro.apple.com <br />
+Time server: time.euro.apple.com <br />`
 A következő oldalon ijesztően sok konfig közül néhány említésre méltó van csak:<br />
-DHCP Hostname: pfSense-totha<br />
-Illetve a két alsó pipa, az maradjon is úgy<br />
-A következő oldalon a LAN beállításokra kérdez rá. Ez megint tőlünk, illetve a feladattól függ. Az alapbeállítás-t írjuk át 192.168.1.1-ről 192.168.**56**.1-re<br />
+`DHCP Hostname: pfSense-totha<br />`
+Illetve a két alsó pipa, abból a felsőt szedjük ki, hogy a host gépről el tudjuk érni az oldalt<br />
+A következő oldalon a LAN beállításokra kérdez rá. Ez megint tőlünk, illetve a feladattól függ. Az alapbeállítás-t írjuk át 192.168.1.1-ről 192.168.**56**.2-re<br />
 Az utolsó oldalon pedig adjunk meg egy admin jelszót, majd jegyezzük meg <br />
 A Reaload gombbal a szerver újratölti a beállításokat. Kb fél perc múlva adjuk ki megint a `pfctl -d` parancsot, hogy ismét hozzáférjünk a confighoz<br />
