@@ -20,7 +20,7 @@ Csináljuk meg a host-only networkot. Ezt a virtual box beállításai > hálóz
 !!!KÉP: vbox host only!!!<br />
 Csináljuk meg a virtuális gépet *ha nincs fent*, majd egyből *még indítás előtt* állítsuk be be a hálózati adaptereit. *Ideiglenesen* kap egy **bridgelt** és egy **host-only** adaptert, a könnyű ssh elérésért és tesztelésért, *később a bridgelt-et kivesszük, mert a forgalom a tűzfalon keresztül fog folyani.*<br />
 **jegyezzük meg meg melyik adapternek mi a neve, később szükségünk lesz rá!**<br />
-!!!KÉP(networks)x2!!!<br />
+![Bridged](https://i.imgur.com/ROeeqBU.png | width=50% ) ![Host-only](https://i.imgur.com/ECGbNpN.png | width=50%)
 Ha nincs felrakva a rendszer, akkor installáljuk. Ez semmi extra, csak a standard Next > Next > OK procedúra <br />
 *(Ha esetleg problémád lenne az ubuntu szerver telepítéssel, ebben a gitben lesz egy ubiinstall.md a segítségedre)*<br />
 **ezeket a beállításokat fogom használni:**<br />
