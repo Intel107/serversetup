@@ -20,7 +20,8 @@ Csináljuk meg a host-only networkot. Ezt a virtual box beállításai > hálóz
 !!!KÉP: vbox host only!!!<br />
 Csináljuk meg a virtuális gépet *ha nincs fent*, majd egyből *még indítás előtt* állítsuk be be a hálózati adaptereit. *Ideiglenesen* kap egy **bridgelt** és egy **host-only** adaptert, a könnyű ssh elérésért és tesztelésért, *később a bridgelt-et kivesszük, mert a forgalom a tűzfalon keresztül fog folyani.*<br />
 **jegyezzük meg meg melyik adapternek mi a neve, később szükségünk lesz rá!**<br />
-![Bridged](https://i.imgur.com/ROeeqBU.png) ![Host-only](https://i.imgur.com/ECGbNpN.png)
+![Bridged](https://i.imgur.com/ROeeqBU.png) ![Host-only](https://i.imgur.com/ECGbNpN.png)<br />
+Általában az enp0s3 adapter a bridgelt, a enp0s8 pedig a host only adapter<br />
 Ha nincs felrakva a rendszer, akkor installáljuk. Ez semmi extra, csak a standard Next > Next > OK procedúra <br />
 *(Ha esetleg problémád lenne az ubuntu szerver telepítéssel, ebben a gitben lesz egy ubiinstall.md a segítségedre)*<br />
 **ezeket a beállításokat fogom használni:**<br />
@@ -28,7 +29,6 @@ Ha nincs felrakva a rendszer, akkor installáljuk. Ez semmi extra, csak a standa
 `jelszó: kalifornia`<br />
 `hostname: ubuntu-sv`<br />
 Telepítésnél elsődleges interfésznek válasszuk a *bridge-lt* adaptert! <br />
-!!!KÉP:install!!!<br />
 Ha a telepítés befejeződött, indítsuk újra a gépet, majd jelentkezzünk be a megadott felhasználó/jelszó kombinációval (user/kalifornia)<br />
 [!!] Ha a feladat azt kéri, hogy a beállítást ssh-n keresztül csináljuk, akkor a telepítés után *egyből* csináljuk ezt meg, illetve innentől kezdve *ne* használjuk a virtualboxban futó oprendszert, csak a hoston lévő terminált!<br />
 Először is telepítsük az openssh-server-t: `sudo apt install openssh-server`<br />
