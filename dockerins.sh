@@ -9,24 +9,6 @@ apt-cache policy docker-ce
 sudo apt-get install -y docker-ce
 sudo systemctl status docker | grep docker.service
 sudo usermod -aG docker $username && echo 'dockerjog OK'
-#cd ~
-#mkdir Docker
-#cd Docker
-#mkdir web
-#touch Dockerfile
-#cat <<EOF> Dockerfile
-#FROM nginx
-#COPY web /usr/share/nginx/html
-#RUN cd /usr/share/nginx/html/ && rm *
-#COPY web /usr/share/nginx/html
-#EXPOSE 80 443
-#CMD ["nginx", "-g", "daemon off;"]
-#EOF
-#touch web/index.html
-#cat <<EOF> web/index.html
-#oke
-#EOF
-#cd ~
-cd Docker
+cd docker
 docker build -t nginx .
 docker run -p 80:80 -d nginx
